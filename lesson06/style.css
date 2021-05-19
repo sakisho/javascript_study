@@ -1,0 +1,22 @@
+#image {
+  opacity: 0;
+  transform: translateY(50px);
+  width: 300px;
+}
+
+.scale {
+  transform: scale(2, .5);
+  transition: all 1s;
+}
+
+#image.opacity {
+  opacity: 0;
+  transition: all 10s;
+  width: 500px;
+}
+
+#image.ty {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s;
+}
