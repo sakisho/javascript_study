@@ -35,12 +35,18 @@ $(function() {
   $(".wrapper").eq(0).addClass("tx");
   $(".wrapper").eq(1).addClass("tx");
 
-  let pos2 = $(".wrapper").eq(2).offset();
-  console.log(pos2);
+  const posStart = 400;
+
+  let
+    pos2 = $(".wrapper").eq(2).offset().top - posStart,
+    pos3 = $(".wrapper").eq(3).offset().top - posStart;
 
   $(window).on("scroll", function() {
-    if ($(this).scrollTop() > pos2.top - 400) {
+    if ($(this).scrollTop() > pos2) {
       $(".wrapper").eq(2).addClass("tx");
+    }
+    if ($(this).scrollTop() > pos3) {
+      $(".wrapper").eq(3).addClass("tx");
     }
   });
 });
