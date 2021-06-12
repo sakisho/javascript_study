@@ -594,6 +594,7 @@ DESKTOP SIZE
 
 .error {
   color: #f00;
+  display: none;
   font-weight: bold;
 }
 
