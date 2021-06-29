@@ -1,0 +1,23 @@
+ol {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+li {
+  align-items: center;
+  border: solid 1px #000;
+  box-sizing: border-box;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  width: 100px;
+}
+
+li:hover {
+  cursor: pointer;
+}
