@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson17</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div class="wrapper">
+    <h1>Tab List</h1>
+  </div>
+
+  <div id="tab">
+    <div
+      v-for="(tab, index) in tabs"
+      :key="tab.id"
+      @click="onClick(index)"
+      class="tab-list"
+      :class="{
+        '-active': index === currentTabIndex
+      }"
+    >
+      <button>{{ tab.name }}</button>
+    </div>
+  </div>
+  <div id="content">
+    {{ currentTabCotent }}
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="tab.js"></script>
+</body>
+</html>
