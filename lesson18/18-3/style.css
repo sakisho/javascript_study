@@ -1,0 +1,49 @@
+#splash {
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+  z-index: 1000;
+}
+
+#splash_text {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1000;
+}
+
+.loader_cover {
+  background: #333;
+  height: 50%;
+  transform: scaleY(1);
+  transition: all .2s cubic-bezier(.04, .435, .315, .9);
+  width: 100%;
+}
+
+.loader_cover-up {
+  transform-origin: center top;
+}
+
+.loader_cover-down {
+  bottom: 0;
+  position: absolute;
+  transform-origin: center bottom;
+}
+
+.cover-anime {
+  transform: scaleY(0);
+}
+
+#container {
+  align-items: center;
+  background: #ccc;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+}

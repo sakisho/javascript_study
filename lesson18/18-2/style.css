@@ -1,0 +1,28 @@
+#splash {
+  background: #333;
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+  z-index: 1000;
+}
+
+#splash_text {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1000;
+}
+
+#container {
+  align-items: center;
+  background: #ccc;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+}
