@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+ul {
+  list-style: none;
+  margin: 10px 0 0 10px;
+  padding: 0;
+}
+
+.btn {
+  border: solid 1px #555;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  padding: 10px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: ease .2s;
+}
+
+.btn span {
+  color: #333;
+  position: relative;
+  z-index: 5;
+}
+
+.btn:hover span {
+  color: #fff;
+}
+
+.bgleft::before {
+  background: #333;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .6s cubic-bezier(.8, 0, .2, 1) 0s;
+  width: 100%;
+  z-index: 1;
+}
+
+.bgleft:hover::before {
+  transform: scale(1 ,1);
+  transform-origin: left top;
+}
+
+.bgright::before {
+  background: #333;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .6s cubic-bezier(.8, 0, .2, 1) 0s;
+  width: 100%;
+  z-index: 1;
+}
+
+.bgright:hover::before {
+  transform: scale(1, 1);
+  transform-origin: right top;
+}
+
+.bgtop::before {
+  background: #333;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: .3s cubic-bezier(.8, 0, .2, 1) 0s;
+  width: 100%;
+  z-index: 1;
+}
+
+.bgtop:hover::before {
+  height: 100%;
+}
+
+.bgbottom::before {
+  background: #333;
+  bottom: 0;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  transition: .3s cubic-bezier(.8, 0, .2, 1) 0s;
+  width: 100%;
+  z-index: 1;
+}
+
+.bgbottom:hover::before {
+  height: 100%;
+}
+
+.bgcenter::before {
+  background: #333;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0, 1);
+  transform-origin: top;
+  transition: transform .6s cubic-bezier(.8, 0, .2, 1) 0s;
+  width: 100%;
+  z-index: 1;
+}
+
+.bgcenter:hover::before {
+  transform: scale(1, 1);
+}
+
+.bgupdown::before {
+  background: #333;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(1, 0);
+  transform-origin: center;
+  transition: transform .6s cubic-bezier(.8, 0, .2, 1) 0s;
+  width: 100%;
+  z-index: 1;
+}
+
+.bgupdown:hover::before {
+  transform: scale(1, 1);
+}
+
+.bgout::before {
+  background: #333;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0, 0);
+  transform-origin: center;
+  transition: transform .6s cubic-bezier(.8, 0, .2, 1) 0s;
+  width: 100%;
+  z-index: 1;
+}
+
+.bgout:hover::before {
+  transform: scale(1, 1);
+}
+
+.bgskew::before {
+  background: #333;
+  content: "";
+  height: 100%;
+  left: -130%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 120%;
+}
+
+.bgskew:hover::before {
+  animation: skewanime .5s forwards;
+}
+
+@keyframes skewanime {
+  100% {
+    left: -10%;
+  }
+}
